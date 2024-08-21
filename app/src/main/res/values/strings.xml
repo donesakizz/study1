@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">InternWork3</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login">GİRİŞ</string>
+    <string name="signup">KAYIT</string>
+    <string name="signinTosignup">Hesabın var mı? KAYDOL</string>
+    <string name="signupTosignin"> Zaten hesabım var, GİRİŞ YAP</string>
+    <string name="password">Şifre</string>
+    <string name="email">Email</string>
+    <string name="discounted_products">İNDİRİMLER!</string>
+    <string name="all_products">ÜRÜN KATEGORİLERİ</string>
+    <string name="notebook">notebook</string>
+    <string name="monitor">monitor</string>
+    <string name="all">Tümü</string>
+    <string name="favorites">FAVORİLER</string>
+    <string name="favoritesUpper">FAVORİLER</string>
+    <string name="cartUpper">SEPET</string>
+    <string name="payment">ÖDEME BİLGİLERİ</string>
+    <string name="cart">SEPET</string>
+    <string name="search">ARAMA</string>
+    <string name="home">ANASAYFA</string>
+    <string name="my_favorites">FAVORİLERİM</string>
+    <string name="user_name">Kullanıcı Adı</string>
+    <string name="log_out">ÇIKIŞ</string>
+    <string name="address">Adres Bilgisi</string>
+    <string name="clear_all">TÜMÜNÜ SİL </string>
+    <string name="total_amount">Toplam Tutar</string>
+    <string name="card_name_surname">Kart Üzerindeki İsim ve Soyisim</string>
+    <string name="card_number">Kart Numaranız</string>
+    <string name="card_date">Ay / Yıl</string>
+    <string name="cvc">CVC</string>
+    <string name="pay">Ödeme Yap</string>
+    <string name="return_home_page">Anasayfaya Geri Dön...</string>
+    <string name="result_text">Ürün siparişiniz alındı !</string>
+    <string name="buy">Satın Al</string>
+    <string name="console">Konsol</string>
+    <string name="desktop">Desktop</string>
+    <string name="headset">Kulaklık</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "645136290121",
+    "project_id": "internwork3-4a895",
+    "storage_bucket": "internwork3-4a895.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645136290121:android:062a0d591110a835df4a98",
+        "android_client_info": {
+          "package_name": "com.example.internwork3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfy9qbm6A51Wg2_XiSHL3LsQ_qwyOibMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
