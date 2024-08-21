@@ -8,10 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.internwork3.R
 import com.example.internwork3.databinding.FragmentProfileBinding
 import com.example.internwork3.util.viewBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -20,7 +22,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
-    /*
+
     private val binding by viewBinding(FragmentProfileBinding::bind)
     private lateinit var auth: FirebaseAuth
     private var bottomNavigationView : BottomNavigationView? = null
@@ -55,13 +57,46 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
         //Fetch user details when fragment is creatred
         auth.currentUser?.let { user ->
-            viewModel.
+            viewModel.fetchUserProfile(user.uid)
+        }
+    }
+
+    private fun setUpObserves(){
+        viewModel.userProfile.observe(viewLifecycleOwner) { profile ->
+            profile?.let {
+                binding.profileUserEmail.text = it.email
+                binding.profileUserName.setText(it.name)
+                binding.profileUserPhone.setText(it.phone)
+            }
         }
 
 
+        viewModel.updateResult.observe(viewLifecycleOwner) { result ->
+            if (result) {
+                Snackbar.make(requireView(), "Profile güncellendi", Snackbar.LENGTH_SHORT).show()
+            } else {
+                Snackbar.make(requireView(), "Profil güncelleme başarısız", Snackbar.LENGTH_SHORT).show()
+            }
+        }
     }
 
-     */
+
+    private fun updateUserProfile() {
+        val name = binding.profileUserName.text.toString()
+        val phone = binding.profileUserPhone.text.toString()
+       // val address = binding.profileUserPhone.text.toString()
+
+        if (auth.currentUser != null) {
+            viewModel.updateUserProfile(auth.currentUser!!.uid, name, phone)
+        }
+    }
+
+    private fun signOut() {
+        auth.signOut()
+        findNavController().navigate(R.id.action_profileFragment_to_signInFragment)
+    }
+
+
 
 
 }
