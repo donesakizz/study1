@@ -1,5 +1,6 @@
 package com.example.internwork3.data.repository
 
+import androidx.room.Query
 import com.example.internwork3.data.model.AddToCartRequest
 import com.example.internwork3.data.model.CRUDResponse
 import com.example.internwork3.data.model.DeleteFromCartRequest
@@ -80,6 +81,15 @@ class ProductRepository @Inject constructor(
 
     suspend fun addProductFav(product: ProductUI) {
         productDao.addProduct(product.mapToProductEntity())
+    }
+
+    suspend fun getSearchProduct(query: String): Resource<List<ProductUI>>  {
+        return try {
+            val response = productService.getSearchProduct(query)
+            Resource.Success(response.products?.map { it.mapToProductUI() }.orEmpty())
+        } catch (e: Exception) {
+            Resource.Error(e)
+        }
     }
 
 

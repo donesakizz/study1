@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/bh"
+    android:background="@color/black"
     tools:context=".ui.profile.ProfileFragment">
 
 
@@ -39,8 +39,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-
         android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profileSignOutButton" />
@@ -53,7 +53,7 @@
         android:text="Adınız"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileUserEmail" />
 
@@ -61,12 +61,12 @@
         android:id="@+id/profileUserName"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/shape_frame"
-
         android:backgroundTint="@color/white"
+        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileUserEmail" />
@@ -76,10 +76,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
-        android:text="Telefon Numaranız"
+        android:text="Telefon Numarsı"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileUserEmail" />
 
@@ -92,6 +92,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/shape_frame"
         android:backgroundTint="@color/white"
+        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileUserName" />

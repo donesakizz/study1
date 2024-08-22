@@ -12,6 +12,7 @@ import com.example.internwork3.util.Constans.Endpoint.GET_PRODUCTS
 import com.example.internwork3.util.Constans.Endpoint.GET_PRODUCTS_BY_CATEGORY
 import com.example.internwork3.util.Constans.Endpoint.GET_PRODUCT_DETAIL
 import com.example.internwork3.util.Constans.Endpoint.GET_SALE_PRODUCTS
+import com.example.internwork3.util.Constans.Endpoint.GET_SEARCH_PRODUCT
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -32,6 +33,8 @@ interface ProductService {
     @GET(GET_CART_PRODUCTS)
     suspend fun getCartProducts(@Query("userId") userId: String) : GetProductsResponse
 
+    @GET(GET_SEARCH_PRODUCT)
+    suspend fun getSearchProduct(@Query("query") queryValue: String): GetProductsResponse
 
     @POST(ADD_CART_PRODUCTS)
     suspend fun addProductToCart(@Body request: AddToCartRequest): CRUDResponse
